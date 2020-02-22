@@ -37,12 +37,12 @@
           </p>
           <p>
             For more information on Vuetify, check out the
-            <a href="https://vuetifyjs.com" target="_blank"> documentation </a>.
+            <a href="https://github.com/naru20181117/yashiro" target="_blank"> Github </a>.
           </p>
           <p>
-            If you have questions, please join the official
-            <a href="https://chat.vuetifyjs.com/" target="_blank" title="chat">
-              discord </a
+            If you wanna see the deployed site, please check the 
+            <a href="https://yashiro.netlify.com/" target="_blank" title="site">
+              site. </a
             >.
           </p>
           <p>
