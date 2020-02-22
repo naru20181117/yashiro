@@ -1,5 +1,25 @@
 <template>
   <v-layout column justify-center align-center>
+    <div class="carousel">
+      <carousel
+        :per-page="2"
+        :per-page-custom="[
+          [480, 1],
+          [780, 2]
+        ]"
+        :autoplay="true"
+        :autoplay-timeout="4000"
+        :speed="2000"
+        :loop="true"
+      >
+        <slide>Slide 1 Content</slide>
+        <slide>Slide 2 Content</slide>
+        <slide>Slide 3 Content</slide>
+        <slide>Slide 4 Content</slide>
+        <slide>Slide 5 Content</slide>
+        <slide>Slide 6 Content</slide>
+      </carousel>
+    </div>
     <v-flex xs12 sm8 md6>
       <div class="text-center">
         <logo />
@@ -63,13 +83,34 @@
 </template>
 
 <script>
+import { Carousel, Slide } from 'vue-carousel'
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   components: {
     Logo,
-    VuetifyLogo
+    VuetifyLogo,
+    Carousel,
+    Slide
   }
 }
 </script>
+
+<style>
+.VueCarousel-inner {
+  margin-top: 30px;
+}
+
+.VueCarousel-slide {
+  height: 150px;
+  color: #fff;
+  background: #4db56a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+</style>
