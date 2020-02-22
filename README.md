@@ -1,6 +1,6 @@
 # yashiro-hp
 
-> Our communtity hp
+> [Our communtity hp](https://yashiro.netlify.com/)
 
 ## Build Setup
 
