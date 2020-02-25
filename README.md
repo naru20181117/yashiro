@@ -1,6 +1,6 @@
 # yashiro-hp
 
-> [Our communtity hp](https://yashiro.netlify.com/)
+> [Our communtity hp](https://yashiro.netlify.com/){:target="_blank"}
 
 ## Build Setup
 
