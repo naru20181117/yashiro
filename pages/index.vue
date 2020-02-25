@@ -1,5 +1,7 @@
 <template>
   <v-layout column justify-center align-center>
+    <video src=":src" autoplay></video>
+    <img src="imgUrl" />
     <div class="carousel">
       <carousel
         :per-page="2"
@@ -27,20 +29,27 @@
       </div>
       <v-card>
         <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
+          いま願うその背中を押す場所に
         </v-card-title>
         <v-card-text>
           <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
+            あなたにとっって屋代（神社）とは、どんな場所ですか？<br />
+            どうしてもかなえたいお願い事がある時に、お祈りをして神様にお願いをする場所ですか<br />
+            本来、お参りは自分の宣誓の場所としてあるものです。<br />
+            「今年はきっと彼氏ができますように」と願う場所ではなく、<br />
+            「今年は彼氏ができるように、友達を増やし、美容を意識して、人を笑顔にできるように努力します！」と神様に迎って誓う場所であるべきです。<br />
+            <br />
+            私たちはそんな頑張りたい人たちがお互いを高め合える<br />
+            そんな場所を目指しています。<br />
           </p>
           <p>
             For more information on Vuetify, check out the
-            <a href="https://github.com/naru20181117/yashiro" target="_blank"> Github </a>.
+            <a href="https://github.com/naru20181117/yashiro" target="_blank">
+              Github
+            </a>
           </p>
           <p>
-            If you wanna see the deployed site, please check the 
+            If you wanna see the deployed site, please check the
             <a href="https://yashiro.netlify.com/" target="_blank" title="site">
               site. </a
             >.
@@ -84,6 +93,7 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel'
+// import prayImage from 'static/images/yashiro.jpg'
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
@@ -93,11 +103,22 @@ export default {
     VuetifyLogo,
     Carousel,
     Slide
+  },
+  data() {
+    return {
+      // src: 'https://www.youtube.com/watch?v=IXAgGr5gR98&feature=emb_logo'
+      src: '~/components/movie/ink_b.mp4',
+      imgUrl: '~/static/images/yashiro.jpg'
+    }
   }
 }
 </script>
 
 <style>
+p {
+  line-height: 35px;
+}
+
 .VueCarousel-inner {
   margin-top: 30px;
 }
