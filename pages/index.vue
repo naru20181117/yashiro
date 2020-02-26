@@ -91,6 +91,7 @@ import { Carousel, Slide } from 'vue-carousel'
 import imgUrl from 'static/images/yashiro.jpg'
 // import imgUrl from 'static/images/参拝.jpg'
 // import imgUrl from 'static/images/神社.jpg'
+import videoUrl from 'static/images/yashiro.jpg'
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
