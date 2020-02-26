@@ -1,5 +1,12 @@
 <template>
   <v-layout column justify-center align-center>
+    <div class="video-frame">
+      <video autoplay :src="video"></video>
+      <p>
+        社会人コミュニティ<br />
+        社 やしろ
+      </p>
+    </div>
     <img :src="img" />
     <div class="carousel">
       <carousel
@@ -13,18 +20,18 @@
         :speed="2000"
         :loop="true"
       >
-        <slide>Slide 1 Content</slide>
-        <slide>Slide 2 Content</slide>
-        <slide>Slide 3 Content</slide>
-        <slide>Slide 4 Content</slide>
-        <slide>Slide 5 Content</slide>
-        <slide>Slide 6 Content</slide>
+        <slide>Event info 1</slide>
+        <slide>Event info 2 </slide>
+        <slide>Event info 3 </slide>
+        <slide>Event info 4 </slide>
+        <slide>Event info 5 </slide>
+        <slide>Event info 6 </slide>
       </carousel>
     </div>
     <v-flex xs12 sm8 md6>
       <div class="text-center">
-        <logo />
-        <vuetify-logo />
+        <!--   <logo />
+        <vuetify-logo /> -->
       </div>
       <v-card>
         <v-card-title class="headline">
@@ -91,21 +98,21 @@ import { Carousel, Slide } from 'vue-carousel'
 import imgUrl from 'static/images/yashiro.jpg'
 // import imgUrl from 'static/images/参拝.jpg'
 // import imgUrl from 'static/images/神社.jpg'
-import videoUrl from 'static/images/yashiro.jpg'
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import videoUrl from '~/components/movie/ink_b.mp4'
+// import Logo from '~/components/Logo.vue'
+// import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   components: {
-    Logo,
-    VuetifyLogo,
+    // Logo,
+    // VuetifyLogo,
     Carousel,
     Slide
   },
   data() {
     return {
       // src: 'https://www.youtube.com/watch?v=IXAgGr5gR98&feature=emb_logo'
-      // src: '~/components/movie/ink_b.mp4',
+      video: videoUrl,
       img: imgUrl
     }
   }
@@ -113,6 +120,27 @@ export default {
 </script>
 
 <style>
+.video-frame {
+  position: relative;
+}
+.video-frame p {
+  font-family: 'cursive';
+  font-size: 5rem;
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  line-height: 8rem;
+  text-align: center;
+}
+.video-frame video {
+  width: 100vw;
+}
 p {
   line-height: 35px;
 }
