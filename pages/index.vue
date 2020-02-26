@@ -1,7 +1,7 @@
 <template>
   <v-layout column justify-center align-center>
     <div class="video-frame">
-      <video autoplay :src="video"></video>
+      <video muted autoplay :src="video"></video>
       <p>
         社会人コミュニティ<br />
         社 やしろ
