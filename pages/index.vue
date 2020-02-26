@@ -1,7 +1,13 @@
 <template>
   <v-layout column justify-center align-center>
-    <video src=":src" autoplay></video>
-    <img src="imgUrl" />
+    <div class="video-frame">
+      <video autoplay :src="video"></video>
+      <p>
+        社会人コミュニティ<br />
+        社 やしろ
+      </p>
+    </div>
+    <img :src="img" />
     <div class="carousel">
       <carousel
         :per-page="2"
@@ -14,18 +20,18 @@
         :speed="2000"
         :loop="true"
       >
-        <slide>Slide 1 Content</slide>
-        <slide>Slide 2 Content</slide>
-        <slide>Slide 3 Content</slide>
-        <slide>Slide 4 Content</slide>
-        <slide>Slide 5 Content</slide>
-        <slide>Slide 6 Content</slide>
+        <slide>Event info 1</slide>
+        <slide>Event info 2 </slide>
+        <slide>Event info 3 </slide>
+        <slide>Event info 4 </slide>
+        <slide>Event info 5 </slide>
+        <slide>Event info 6 </slide>
       </carousel>
     </div>
     <v-flex xs12 sm8 md6>
       <div class="text-center">
-        <logo />
-        <vuetify-logo />
+        <!--   <logo />
+        <vuetify-logo /> -->
       </div>
       <v-card>
         <v-card-title class="headline">
@@ -43,7 +49,7 @@
             そんな場所を目指しています。<br />
           </p>
           <p>
-            For more information on Vuetify, check out the
+            For more information for this code, check out the
             <a href="https://github.com/naru20181117/yashiro" target="_blank">
               Github
             </a>
@@ -55,25 +61,21 @@
             >.
           </p>
           <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >
-              issue board </a
-            >.
+            Wanna see a old site?
+            <a href="https://zenkokucdc.wordpress.com/" target="_blank">
+              全国キャリアセンター
+            </a>
           </p>
           <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
+            Thank you for watching with your concern and I look forward to
+            having more exciting activity with you.
           </p>
           <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+            <em><small>&mdash; Naruhiro Tsukazaki</small></em>
           </div>
           <hr class="my-3" />
-          <a href="https://nuxtjs.org/" target="_blank">
-            Nuxt Documentation
+          <a href="https://www.facebook.com/eto.ryuji" target="_blank">
+            Eto Ryuji
           </a>
           <br />
           <a href="https://github.com/nuxt/nuxt.js" target="_blank">
@@ -93,28 +95,52 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel'
-// import prayImage from 'static/images/yashiro.jpg'
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import imgUrl from 'static/images/yashiro.jpg'
+// import imgUrl from 'static/images/参拝.jpg'
+// import imgUrl from 'static/images/神社.jpg'
+import videoUrl from '~/components/movie/ink_b.mp4'
+// import Logo from '~/components/Logo.vue'
+// import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
   components: {
-    Logo,
-    VuetifyLogo,
+    // Logo,
+    // VuetifyLogo,
     Carousel,
     Slide
   },
   data() {
     return {
       // src: 'https://www.youtube.com/watch?v=IXAgGr5gR98&feature=emb_logo'
-      src: '~/components/movie/ink_b.mp4',
-      imgUrl: '~/static/images/yashiro.jpg'
+      video: videoUrl,
+      img: imgUrl
     }
   }
 }
 </script>
 
 <style>
+.video-frame {
+  position: relative;
+}
+.video-frame p {
+  font-family: 'cursive';
+  font-size: 5rem;
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  line-height: 8rem;
+  text-align: center;
+}
+.video-frame video {
+  width: 100vw;
+}
 p {
   line-height: 35px;
 }

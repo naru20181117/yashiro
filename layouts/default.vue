@@ -59,7 +59,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; {{ new Date().getFullYear() }} Naruhiro</span>
     </v-footer>
   </v-app>
 </template>
@@ -79,6 +79,21 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
+          title: 'イベント',
+          to: '/event'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'スタッフ',
+          to: '/staff'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: '団体概要',
+          to: '/about'
+        },
+        {
+          icon: 'mdi-chart-bubble',
           title: 'Inspire',
           to: '/inspire'
         }
@@ -86,7 +101,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: '社 [ やしろ ]'
     }
   }
 }
