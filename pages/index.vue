@@ -7,9 +7,6 @@
         社 やしろ
       </p>
     </div>
-    <div class="img-frame">
-      <img :src="img" />
-    </div>
     <div class="carousel">
       <carousel
         :per-page="2"
@@ -97,10 +94,8 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel'
-import imgUrl from 'static/images/yashiro.jpg'
-// import imgUrl from 'static/images/参拝.jpg'
-// import imgUrl from 'static/images/神社.jpg'
-import videoUrl from '~/components/movie/ink_b.mp4'
+// import videoUrl from '~/components/movie/ink_b.mp4'
+import videoUrl from '~/components/movie/sl_d.mp4'
 // import Logo from '~/components/Logo.vue'
 // import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
@@ -114,8 +109,7 @@ export default {
   data() {
     return {
       // src: 'https://www.youtube.com/watch?v=IXAgGr5gR98&feature=emb_logo'
-      video: videoUrl,
-      img: imgUrl
+      video: videoUrl
     }
   }
 }
@@ -142,11 +136,6 @@ export default {
 }
 .video-frame video {
   width: 100vw;
-  max-width: 100%;
-  height: auto;
-}
-.img-frame img {
-  width: 100%;
   max-width: 100%;
   height: auto;
 }
