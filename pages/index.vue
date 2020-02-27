@@ -7,7 +7,9 @@
         社 やしろ
       </p>
     </div>
-    <img :src="img" />
+    <div class="img-frame">
+      <img :src="img" />
+    </div>
     <div class="carousel">
       <carousel
         :per-page="2"
@@ -125,7 +127,7 @@ export default {
 }
 .video-frame p {
   font-family: 'cursive';
-  font-size: 5rem;
+  font-size: 4vw;
   position: absolute;
   color: white;
   top: 50%;
@@ -135,11 +137,18 @@ export default {
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
-  line-height: 8rem;
+  line-height: 2em;
   text-align: center;
 }
 .video-frame video {
   width: 100vw;
+  max-width: 100%;
+  height: auto;
+}
+.img-frame img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 p {
   line-height: 35px;
