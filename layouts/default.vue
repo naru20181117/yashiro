@@ -106,3 +106,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-toolbar__content {
+  background-color: transparent; /* ヘッダの背景色 黒を指定*/
+  /* 半透明にする*/
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+</style>
